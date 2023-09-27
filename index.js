@@ -14,7 +14,7 @@ fetch("https://striveschool-api.herokuapp.com/books")
             <div class="card-body">
                  <button class='btn btn-primary' onclick="addToCart('${book.title}', '${book.price}', '${book.asin}')"> EUR ${book.price} </button>
                 <a href="#" onclick="azione('scompare');" class="btn btn-primary">salta</a>
-                <button class='btn btn-primary' onclick="openbook(book)">open<button>
+                <button class='btn btn-primary' onclick="openbook(${book.asin})">open<button>
             </div>
         </div>
 
@@ -24,20 +24,23 @@ fetch("https://striveschool-api.herokuapp.com/books")
     })
     .catch((err) => console.error(err))
 
-function openbook(book){
-  console.log(book)
+    /*vado a richiamare la funzione per il button open del libro*/ 
+
+function openbook(asin){
+    window.open(`book.html?asin=${asin}`)
+  
 }
 
 /*funzione carrello/ collegamento con onclick="addToCart per aggiungere book al carrello
 e vedere il prezzo totale */
 
-let carrello = []
+/*let carrello = []
 
 function addtocart(book) {
     carrello.push(book)
     document.getElementById("numero prodotti").innerHTML = book.length      /*? da rivedere*/
 
-}
+/*}
 
 function totale() {
     let totale = document.getElementById("totale")
@@ -49,7 +52,7 @@ function somma() {
     for (let i = 0; i < book.length; i++)
         somma += book[i].prezzo;
     return somma
-}
+}*/
 
 /*al click le card scompaiono/ collegamento con div id=" scompare e onclick="azione('scompare');"*/
 
