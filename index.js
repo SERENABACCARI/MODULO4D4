@@ -34,13 +34,13 @@ function openbook(asin){
 /*funzione carrello/ collegamento con onclick="addToCart per aggiungere book al carrello
 e vedere il prezzo totale */
 
-/*let carrello = []
+let carrello = []
 
 function addtocart(book) {
     carrello.push(book)
     document.getElementById("numero prodotti").innerHTML = book.length      /*? da rivedere*/
 
-/*}
+}
 
 function totale() {
     let totale = document.getElementById("totale")
@@ -52,7 +52,7 @@ function somma() {
     for (let i = 0; i < book.length; i++)
         somma += book[i].prezzo;
     return somma
-}*/
+}
 
 /*al click le card scompaiono/ collegamento con div id=" scompare e onclick="azione('scompare');"*/
 
