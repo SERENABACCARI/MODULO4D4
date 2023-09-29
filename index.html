@@ -16,8 +16,10 @@
             <a class="navbar-brand">Marketplace</a>
             <form class="d-flex" role="search">
                 <section>
-                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
-                    <div id="Risultati"></div>
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search"
+                    oninput="fetchBook(this.value)">
+                    
+                    
                 </section>
                 
                 <button class="btn btn-" type="submit" onclick="search()">search<i class="bi bi-search"></i><svg
@@ -44,10 +46,10 @@
     </div>
 
     <!--section carrello-->
-    <div>
+    <div style="display: flex;justify-content: center;margin-bottom: 5rem;">
         <img id="Carrello" src="carrello.jpg" alt="">
-        <h3 id="numero prodotti">0</h3>
-        <p id="totale">0</p>
+        <h3 id="numero prodotti"></h3>
+        <p id="totale"></p>
     </div>
 
     <!--card libri-->
